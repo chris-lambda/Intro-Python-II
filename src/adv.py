@@ -103,7 +103,7 @@ Controls
 """)
 
     print(f"Location: {p.room.name}")
-    print(f"{p.room.description}")
+    print(f"Hint: {p.room.description}")
     print(f"Bag: {p.pack}/{p.limit}")
     print(f"Inventory: {playerInv}")
     print(f"Surroundings: {roomItems}")
@@ -154,5 +154,6 @@ Controls
                 p.room = p.room.w_to
             else:
                 error = f"Oops nothing there still at {p.room.name}"
+    # elif action == "i":    
     else: 
         print("Please enter proper command look at controls")

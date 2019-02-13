@@ -17,4 +17,5 @@ class Player:
 
     #TODO player can frop items
     def drop(self, index):
+        self.pack = self.pack - self.inv[index].weight
         del self.inv[index]
