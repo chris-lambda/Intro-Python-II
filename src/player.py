@@ -2,10 +2,19 @@
 # currently.
 
 class Player:
-    def __init__(self, room):
+    def __init__(self, room, pack, limit):
         self.room = room
         # TODO player can carry items
+        self.inv = []
+        self.pack = pack
+        self.limit = limit
     
     #TODO player can pickup items
+    def get(self, item):
+        self.inv.append(item)
+        self.pack = self.pack + item.weight
+
 
     #TODO player can frop items
+    def drop(self, index):
+        del self.inv[index]
